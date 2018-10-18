@@ -45,14 +45,15 @@ module.exports = {
                 test: /\.(sass|scss)$/,
                 include: path.resolve(__dirname, 'src/scss'),
                 use: ExtractTextPlugin.extract({
-                    use: [{
-                        loader: "css-loader",
-                        options: {
-                            sourceMap: true,
-                            minimize: true,
-                            url: false
-                        }
-                    },
+                    use: [
+                        {
+                            loader: "css-loader",
+                            options: {
+                                sourceMap: true,
+                                minimize: true,
+                                url: false
+                            }
+                        },
                         {
                             loader: "sass-loader",
                             options: {
